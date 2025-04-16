@@ -34,7 +34,6 @@ int main (){
 // Área
 // PIB
 // Número de Pontos Turísticos
-    // int comparacao;
     char estado_1, estado_2;
     char id_1[4], id_2[4];
     // char id[32][4];
@@ -122,35 +121,75 @@ int main (){
     printf("***************************************************************************************\n");
 
     printf("Carta 1 \n");
-
-    printf("Estado: %c\n", estado_1);
+// Resultado carta 1
+    printf("\nEstado: %c\n", estado_1);
     printf("Codigo: %s\n", id_1);
     printf("Nome da Cidade: %s\n", cidade[0]);
-    printf("Populacao: %f\n", n_populacao_1);
-    printf("Area: %f km\n", area_1);
-    printf("PIB: %f bilhoes de reais\n", pib_1);
+    printf("Populacao: %.2f\n", n_populacao_1);
+    printf("Area: %.2f km\n", area_1);
+    printf("PIB: %.3f bilhoes de reais\n", pib_1);
     printf("Numero de Pontos Turisticos: %d\n", np_turisticos_1);
     printf("Densidade Populacional: %.2f hab/km\n", result_dp);
-    printf("PIB per Capita: %f reais\n", result_pib_pc);
-    printf("Super Poder: %.3f", super_poderC1);
-
+    printf("PIB per Capita: %2.f reais\n", result_pib_pc);
+    printf("Super Poder: %.3f\n", super_poderC1);
+    
     printf("\nCarta 2 \n");
-
-    printf("Estado: %c\n", estado_2);
+// Resultado carta 2
+    printf("\nEstado: %c\n", estado_2);
     printf("Codigo: %s\n", id_2);
     printf("Nome da Cidade: %s\n", cidade[1]);
-    printf("Populacao: %f\n", n_populacao_2);
-    printf("Area: %f km\n", area_2);
-    printf("PIB: %f bilhoes de reais\n", pib_2);
+    printf("Populacao: %.2f\n", n_populacao_2);
+    printf("Area: %.2f km\n", area_2);
+    printf("PIB: %.3f bilhoes de reais\n", pib_2);
     printf("Numero de Pontos Turisticos: %d\n", np_turisticos_2);
-    printf("Densidade Populacional: %f hab/km\n", result_dp2);
-    printf("PIB per Capita: %f reais\n", result_pib_pc2);
+    printf("Densidade Populacional: %.2f hab/km\n", result_dp2);
+    printf("PIB per Capita: %.2f reais\n", result_pib_pc2);
     printf("Super Poder: %.3f\n", super_poderC2);
 
+    printf("\n******************************************************\n");
+    printf("Hora de determinarmos quem sera o vitorioso da rodada!\n");
+    printf("********************************************************\n");
+// Comparação do N° de população
     if(n_populacao_1 > n_populacao_2){
-        printf("Carta 1 vence com %.2f pontos em populacao", n_populacao_1);
+        printf("Carta 1 vence com %.2f pontos em populacao\n", n_populacao_1);
     } else{
-        printf("Carta 2 vence com %.2f pontos em populacao", n_populacao_2);
+        printf("Carta 2 vence com %.2f pontos em populacao\n", n_populacao_2);
+    }
+// Comparação N° de área
+    if (area_1 > area_2){
+        printf("Carta 1 vence com %.2f pontos de area\n", area_1);
+    } else{
+        printf("Carta 2 vence com %.2f pontos de area\n", area_2);
+    }
+//Comparação N° do PIB
+    if (pib_1 > pib_2){
+        printf("Carta 1 vence com %.3f pontos de PIB\n", pib_1);
+    } else{
+        printf("Carta 2 vence com %.3f pontos de PIB\n", pib_2);
+    }
+// Comparação N° pontos turísticos
+    if (np_turisticos_1 > np_turisticos_2){
+        printf("Carta 1 vence com %d pontos turisticos\n", np_turisticos_1);
+    } else{
+        printf("Carta 2 vence com %d pontos turisticos\n", np_turisticos_2);
+    }
+// Comparação desidade populacional
+    if (result_dp < result_dp2){
+        printf("Carta 1 vence com %.2f de desnsidade populacional\n", result_dp);
+    } else{
+        printf("Carta 2 vence com %.2f de desnsidade populacional\n", result_dp2);
+    }
+// Comparação PIB per Capita
+    if (result_pib_pc > result_pib_pc2){
+        printf("Carta 1 vence com %.2f pontos de PIB per capita\n", result_pib_pc);
+    } else{
+        printf("Carta 2 vence com %.2f pontos de PIB per capita\n", result_pib_pc2);
+    }
+// Comparação Super poder 
+    if (super_poderC1 > super_poderC2){
+        printf("Carta 1 vence com %.3f pontos de poder\n", super_poderC1);
+    } else{
+        printf("Carta 2 vence com %.3f pontos de poder\n", super_poderC2);
     }
 
     system("pause");
@@ -161,14 +200,3 @@ int main (){
 // char - %c (caractere)
 // float - %f ou %e (notação cient.)
 // string - %s (string de caracteres)
-
-// char id[32][4] = {
-//     "A01", "A02", "A03", "A04",
-//     "B01", "B02", "B03", "B04",
-//     "C01", "C02", "C03", "C04",
-//     "D01", "D02", "D03", "D04",
-//     "E01", "E02", "E03", "E04",
-//     "F01", "F02", "F03", "F04",
-//     "G01", "G02", "G03", "G04",
-//     "H01", "H02", "H03", "H04"
-// };
